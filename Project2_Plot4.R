@@ -14,7 +14,7 @@ class_code_df <- tbl_df(class_code)
 
 
 #Names which are unique to coal combustion related sources
-coal_class <- class_code_df[grep("(C|c)oal", class_code_df$SCC.Level.Three),]
+coal_class <- class_code_df[grep("\\b(C|c)oal\\b", class_code_df$SCC.Level.Three),]
 
 #Change SCC into factors 
 summary_SCC_df$SCC <- as.factor(summary_SCC_df$SCC)
